@@ -1,4 +1,4 @@
-//Destructuring com arrays.
+//Desestruturação com arrays.
 
 //Começaremos entendendo como funciona o destructuring em arrays.
 
@@ -25,4 +25,37 @@ console.log('*************************************************************');
 let [varA = 'Teste', varB = varA] = [];
 console.log(varA);
 console.log(varB);
+console.log('*************************************************************');
+
+a="";
+b="";
+rest="";
+[a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+console.log('*************************************************************');
+
+
+[a, b, ...rest] = [1, 2, 3, 4, 5];
+console.log(a); // 1
+console.log(b); // 2
+console.log(rest); // [3, 4, 5]
+console.log('*************************************************************');
+
+console.log('*************************Assign Exemplo****************************');
+var obj = {personCode: 123};
+var obj2 = {personId: '1234'}
+console.log(Object.assign(obj,obj2))
+console.log('*************************************************************');
+
+console.log('********************** objetos - exemplo *****************************');
+var obj = {personCode: 123};
+obj.personId = obj2.personId;
+console.log(obj);
+console.log('*************************************************************');
+
+console.log('*********************[] - exemplo******************************');
+var obj = {personCode: 123};
+obj['personId'] = obj2.personId;
+console.log(obj['personId']);
 console.log('*************************************************************');
